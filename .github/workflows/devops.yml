@@ -69,4 +69,5 @@ jobs:
          - name: Deploy to Heroku 🚓
            run: heroku plugins:install java && heroku war:deploy LostPets.war --app ${{ secrets.HEROKU_APP_NAME }}
            env:
+              HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
               HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
