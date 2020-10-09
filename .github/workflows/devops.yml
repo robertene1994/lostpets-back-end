@@ -49,3 +49,26 @@ jobs:
            with:
              name: documentation
              path: doc
+             
+   deploy:
+      name: Deploy 🚀
+      runs-on: ubuntu-latest
+      needs: build-and-test
+      if: "contains(github.event.head_commit.message, '-release-')"
+      steps:
+         - name: Download build 📥
+           uses: actions/download-artifact@v2
+           with:
+              name: LostPets
+              path: target
+              
+         - name: Login to Heroku 🔓
+           run: heroku container:login
+           env: 
+              HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+            
+         - name: Deploy to Heroku 🚓
+           run: heroku plugins:install java && heroku create --no-remote && heroku war:deploy target/LostPets.war --app ${{ secrets.HEROKU_APP_NAME }}
+           env:
+              HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+              HEROKU_APP_NAME: ${{ secrets.HEROKU_APP_NAME }}
