@@ -109,27 +109,4 @@
 			</testResource>
 		</testResources>
 	</build>
-	
-	<!-- Repositories -->
-	<repositories>
-		<repository>
-			<id>spring-releases</id>
-			<url>https://repo.spring.io/libs-release</url>
-		</repository>
-		<repository>
-			<id>io.spring.repo.maven.release</id>
-			<url>http://repo.spring.io/release/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<!-- Plugin Repositories -->
-	<pluginRepositories>
-		<pluginRepository>
-			<id>spring-releases</id>
-			<url>https://repo.spring.io/libs-release</url>
-		</pluginRepository>
-	</pluginRepositories>
 </project>
