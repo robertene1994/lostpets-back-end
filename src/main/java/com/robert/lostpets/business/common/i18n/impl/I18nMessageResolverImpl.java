@@ -12,7 +12,7 @@ import com.robert.lostpets.business.common.i18n.I18nMessageResolver;
  * Clase que implementa la interfaz I18nMessageResolver.
  * 
  * @author Robert Ene
- * @see com.robert.lostpets.business.util.i18n.I18nMessageResolver
+ * @see com.robert.lostpets.business.common.i18n.I18nMessageResolver
  */
 @Service
 public class I18nMessageResolverImpl implements I18nMessageResolver {

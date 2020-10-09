@@ -102,6 +102,17 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<!-- JavaDoc -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-javadoc-plugin</artifactId>
+		        <configuration>
+			        <noqualifier>all</noqualifier>
+			        <reportOutputDirectory>${basedir}</reportOutputDirectory>
+			        <destDir>doc</destDir>
+			        <additionalparam>-Xdoclint:none</additionalparam>
+			    </configuration>
+		    </plugin>
 		</plugins>
 		<testResources>
 			<testResource>
