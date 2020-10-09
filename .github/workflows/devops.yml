@@ -26,14 +26,10 @@ jobs:
            run: mvn compile
          
          - name: Test 🧪
-           run: mvn test
-           env:
-              JASYPT_ENCRYPTOR_PASSWORD: ${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}
+           run: mvn test -Djasypt.encryptor.password=${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}
          
          - name: Build ⚒️
-           run: mvn clean package
-           env:
-              JASYPT_ENCRYPTOR_PASSWORD: ${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}
+           run: mvn clean package -Djasypt.encryptor.password=${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}
 
          - name: Archive build 📚
            uses: actions/upload-artifact@v2
