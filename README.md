@@ -3,17 +3,18 @@
 	<br>
 	LostPets: Lost Pets Ads System
 </h1>
-<div align="center">
-	<h4>
-		<img src="https://forthebadge.com/images/badges/made-with-java.svg"/>
-		<img src="https://forthebadge.com/images/badges/uses-git.svg"/>
-  </h4>
-
+<h4 align="center">
+	<img src="https://forthebadge.com/images/badges/made-with-java.svg"/>
+	<img src="https://forthebadge.com/images/badges/uses-git.svg"/>
+</h4>
+  
 ### This is a Java application for lost pets ads (my master's thesis) built with Spring. It is available at [LostPets](https://lostpets-web.herokuapp.com).
 
 #### Code Quality
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=alert_status)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end) 
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end)  [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=security_rating)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end) 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=alert_status)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end)
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end) [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end)  [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=security_rating)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end)
+
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=bugs)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=code_smells)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end)
 
 #### Continuous Integration
