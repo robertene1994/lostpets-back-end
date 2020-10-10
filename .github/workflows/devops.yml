@@ -24,8 +24,9 @@ jobs:
          - name: SonarCloud scan 🔎
            run: mvn verify sonar:sonar -DskipTests
            env:
-             JASYPT_ENCRYPTOR_PASSWORD: ${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}
-             SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+              GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              JASYPT_ENCRYPTOR_PASSWORD: ${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}
+              SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
    build-and-test:
       name: Build and test ⚙️
