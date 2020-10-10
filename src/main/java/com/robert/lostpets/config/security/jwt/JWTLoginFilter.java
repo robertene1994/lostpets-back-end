@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
@@ -34,8 +33,7 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
 
 	@Override
 	public Authentication attemptAuthentication(HttpServletRequest req,
-			HttpServletResponse res)
-			throws AuthenticationException, IOException, ServletException {
+			HttpServletResponse res) throws IOException, ServletException {
 
 		AccountCredentials creds = new ObjectMapper()
 				.readValue(req.getInputStream(), AccountCredentials.class);
@@ -44,9 +42,8 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
 
 		Authentication auth = null;
 
-		if (creds != null
-				&& (creds.getEmail() != null && creds.getPassword() != null
-						&& !creds.getEmail().isEmpty())
+		if ((creds.getEmail() != null && creds.getPassword() != null
+				&& !creds.getEmail().isEmpty())
 				&& !creds.getPassword().isEmpty()) {
 			try {
 				auth = getAuthenticationManager().authenticate(token);
@@ -65,6 +62,6 @@ public class JWTLoginFilter extends AbstractAuthenticationProcessingFilter {
 
 		TokenAuthenticationService.addAuthentication(res, auth.getName(),
 				((GrantedAuthority) auth.getAuthorities().toArray()[0])
-						.getAuthority().toString());
+						.getAuthority());
 	}
 }

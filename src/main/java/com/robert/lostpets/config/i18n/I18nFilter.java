@@ -36,7 +36,7 @@ public class I18nFilter implements Filter {
 
 	@Override
 	public void init(FilterConfig filterConfig) {
-
+		// not applicable
 	}
 
 	@Override
@@ -57,6 +57,6 @@ public class I18nFilter implements Filter {
 
 	@Override
 	public void destroy() {
-		
+		// not applicable
 	}
 }

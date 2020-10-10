@@ -4,19 +4,19 @@ public enum AdStatus {
 
 	ENABLED("ENABLED"), DISABLED("DISABLED");
 
-	private String adStatus;
+	private String status;
 
-	AdStatus(String adStatus) {
-		this.adStatus = adStatus;
+	AdStatus(String status) {
+		this.status = status;
 	}
 
-	public String getAdStatus() {
-		return adStatus;
+	public String getStatus() {
+		return status;
 	}
 
 	public static AdStatus fromString(String adStatus) {
 		for (AdStatus aS : AdStatus.values()) {
-			if (aS.getAdStatus().equalsIgnoreCase(adStatus)) {
+			if (aS.getStatus().equalsIgnoreCase(adStatus)) {
 				return aS;
 			}
 		}
@@ -27,7 +27,7 @@ public enum AdStatus {
 		StringBuilder sb = new StringBuilder("[");
 
 		for (AdStatus aS : AdStatus.values()) {
-			sb.append(aS.getAdStatus());
+			sb.append(aS.getStatus());
 			if (!aS.equals(AdStatus.values()[AdStatus.values().length - 1]))
 				sb.append(", ");
 		}

@@ -29,8 +29,8 @@ import io.jsonwebtoken.SignatureException;
  * 
  * @author Robert Ene
  */
+@SuppressWarnings({"static-access", "java:S2209", "java:S2696"})
 @Component
-@SuppressWarnings("static-access")
 public class TokenAuthenticationService {
 
 	private static String authHeader;

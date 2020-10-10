@@ -1,12 +1,13 @@
 package com.robert.lostpets.entity.exception;
 
+@SuppressWarnings("java:S1165")
 public class BusinessException extends Exception {
 
 	private static final long serialVersionUID = -6515929069510871993L;
 
 	private String field;
 	private String key;
-	private Object[] args;
+	private transient Object[] args;
 
 	public BusinessException() {
 		super();

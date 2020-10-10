@@ -85,7 +85,7 @@ public class ChatServiceImpl implements ChatService {
 	public List<Chat> findByUserId(Long id) throws BusinessException {
 		validator.findByUserId(id);
 		User user = userRepository.findOne(id);
-		List<Chat> chats = new ArrayList<Chat>();
+		List<Chat> chats = new ArrayList<>();
 
 		if (user == null)
 			throw new BusinessException("user", "chat.find.id.invalid");

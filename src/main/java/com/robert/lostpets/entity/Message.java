@@ -152,10 +152,4 @@ public class Message extends GenericEntity<Long> {
 				+ date + ", messageStatus=" + messageStatus + ", fromUser="
 				+ fromUser + ", toUser=" + toUser + ", chat=" + chat + "]";
 	}
-
-	// -------------- RELATIONS --------------
-
-	void _setChat(Chat chat) {
-		this.chat = chat;
-	}
 }

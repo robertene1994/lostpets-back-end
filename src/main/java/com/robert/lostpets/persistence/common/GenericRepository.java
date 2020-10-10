@@ -12,10 +12,10 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  * @author Robert Ene
  * 
  * @param <T> el tipo de la entidad
- * @param <ID> el tipo del id de la entidad
+ * @param <I> el tipo del id de la entidad
  */
 @NoRepositoryBean
-public interface GenericRepository<T, ID extends Serializable>
-		extends PagingAndSortingRepository<T, ID> {
+public interface GenericRepository<T, I extends Serializable>
+		extends PagingAndSortingRepository<T, I> {
 
 }

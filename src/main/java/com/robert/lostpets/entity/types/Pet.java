@@ -108,6 +108,7 @@ public class Pet implements Serializable {
 		return result;
 	}
 
+	@SuppressWarnings("java:S3776")
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)

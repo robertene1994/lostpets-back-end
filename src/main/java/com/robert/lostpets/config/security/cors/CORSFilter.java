@@ -30,7 +30,7 @@ public class CORSFilter implements Filter {
 
 	@Override
 	public void init(FilterConfig filterConfig) {
-
+		// not applicable
 	}
 
 	@Override
@@ -49,13 +49,13 @@ public class CORSFilter implements Filter {
 		response.setHeader("Access-Control-Expose-Headers",
 				"X-Requested-With, Authorization, Origin, Content-Type, Content-Length, Version, Content-Disposition, X-Filename, Accept-Language");
 
-		if (request.getMethod() != "OPTIONS") {
+		if (!request.getMethod().equalsIgnoreCase("OPTIONS")) {
 			chain.doFilter(req, res);
 		}
 	}
 
 	@Override
 	public void destroy() {
-
+		// not applicable
 	}
 }

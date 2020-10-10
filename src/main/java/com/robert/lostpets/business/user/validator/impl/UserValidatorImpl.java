@@ -14,6 +14,7 @@ import com.robert.lostpets.entity.types.UserStatus;
  * @author Robert Ene
  * @see com.robert.lostpets.business.user.validator.UserValidator
  */
+@SuppressWarnings("java:S1192")
 @Component
 public class UserValidatorImpl implements UserValidator {
 
@@ -65,7 +66,7 @@ public class UserValidatorImpl implements UserValidator {
 		if (account == null || account.getEmail().trim().isEmpty())
 			throw new BusinessException("email",
 					"user.valid.account.email.required");
-		if (account == null || account.getPassword().trim().isEmpty())
+		if (account.getPassword().trim().isEmpty())
 			throw new BusinessException("password",
 					"user.valid.account.password.required");
 	}

@@ -205,20 +205,4 @@ public class User extends GenericEntity<Long>
 				+ ", phone=" + phone + ", firstName=" + firstName
 				+ ", lastName=" + lastName + "]";
 	}
-
-	// -------------- RELATIONS --------------
-
-	Set<Ad> _getAds() {
-		return ads;
-	}
-
-	public void addAd(Ad a) {
-		a._setUser(this);
-		ads.add(a);
-	}
-
-	public void removeAd(Ad a) {
-		ads.remove(a);
-		a._setUser(null);
-	}
 }

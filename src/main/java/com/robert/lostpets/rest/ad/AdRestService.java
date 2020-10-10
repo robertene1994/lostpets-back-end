@@ -22,6 +22,7 @@ import com.robert.lostpets.entity.types.AdStatus;
  * 
  * @author Robert Ene
  */
+@SuppressWarnings("java:S4684")
 @RequestMapping("ad")
 public interface AdRestService {
 

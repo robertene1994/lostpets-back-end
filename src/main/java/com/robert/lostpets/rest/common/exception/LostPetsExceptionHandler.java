@@ -27,20 +27,20 @@ import com.robert.lostpets.entity.exception.ExceptionResponse;
 @ControllerAdvice
 public class LostPetsExceptionHandler {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionHandler.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(LostPetsExceptionHandler.class);
 
 	@Autowired
 	private I18nMessageResolver messageResolver;
 	
 	@ExceptionHandler(Exception.class)
-	public ResponseEntity<ExceptionResponse> exception(Exception e) throws Exception {
+	public ResponseEntity<ExceptionResponse> exception(Exception e) {
 		ExceptionResponse eR = new ExceptionResponse();
 		eR.setField("");
 		eR.setCode(HttpStatus.INTERNAL_SERVER_ERROR.toString());
 		eR.setException(e.getClass().getSimpleName());
 		eR.setMessage(e.getMessage());
-		LOGGER.error(e.toString());
-		return new ResponseEntity<ExceptionResponse>(eR, HttpStatus.INTERNAL_SERVER_ERROR);
+		LOGGER.error("ERROR: {0}", e);
+		return new ResponseEntity<>(eR, HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 	@ExceptionHandler(ServletException.class)
@@ -50,19 +50,19 @@ public class LostPetsExceptionHandler {
 		eR.setCode(HttpStatus.BAD_REQUEST.toString());
 		eR.setException(e.getClass().getSimpleName());
 		eR.setMessage(e.getLocalizedMessage());
-		LOGGER.error(e.toString());
-		return new ResponseEntity<ExceptionResponse>(eR, HttpStatus.BAD_REQUEST);
+		LOGGER.error("ERROR: {0}", e);
+		return new ResponseEntity<>(eR, HttpStatus.BAD_REQUEST);
 	}
 
 	@ExceptionHandler(HttpRequestMethodNotSupportedException.class)
 	public ResponseEntity<ExceptionResponse> httpRequestMethodNotSupportedException(
-			HttpRequestMethodNotSupportedException e) throws HttpRequestMethodNotSupportedException {
+			HttpRequestMethodNotSupportedException e) {
 		ExceptionResponse eR = new ExceptionResponse();
 		eR.setField("");
 		eR.setCode(HttpStatus.METHOD_NOT_ALLOWED.toString());
 		eR.setException(e.getClass().getSimpleName());
 		eR.setMessage(e.getMessage());
-		return new ResponseEntity<ExceptionResponse>(eR, HttpStatus.METHOD_NOT_ALLOWED);
+		return new ResponseEntity<>(eR, HttpStatus.METHOD_NOT_ALLOWED);
 	}
 
 	@ExceptionHandler(MethodArgumentTypeMismatchException.class)
@@ -73,16 +73,16 @@ public class LostPetsExceptionHandler {
 		eR.setCode(HttpStatus.NOT_ACCEPTABLE.toString());
 		eR.setException(e.getClass().getSimpleName());
 		eR.setMessage(e.getMessage());
-		return new ResponseEntity<ExceptionResponse>(eR, HttpStatus.OK);
+		return new ResponseEntity<>(eR, HttpStatus.OK);
 	}
 
 	@ExceptionHandler(BusinessException.class)
-	public ResponseEntity<ExceptionResponse> businessException(BusinessException e) throws BusinessException {
+	public ResponseEntity<ExceptionResponse> businessException(BusinessException e) {
 		ExceptionResponse eR = new ExceptionResponse();
 		eR.setField(e.getField());
 		eR.setCode(HttpStatus.BAD_REQUEST.toString());
 		eR.setException(e.getClass().getSimpleName());
 		eR.setMessage(messageResolver.getMessage(e.getKey(), e.getArgs()));
-		return new ResponseEntity<ExceptionResponse>(eR, HttpStatus.BAD_REQUEST);
+		return new ResponseEntity<>(eR, HttpStatus.BAD_REQUEST);
 	}
 }

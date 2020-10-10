@@ -4,19 +4,19 @@ public enum UserStatus {
 
 	ENABLED("ENABLED"), DISABLED("DISABLED");
 
-	private String userStatus;
+	private String status;
 
-	UserStatus(String userStatus) {
-		this.userStatus = userStatus;
+	UserStatus(String status) {
+		this.status = status;
 	}
 
-	public String getUserStatus() {
-		return userStatus;
+	public String getStatus() {
+		return status;
 	}
 
 	public static UserStatus fromString(String userStatus) {
 		for (UserStatus uS : UserStatus.values()) {
-			if (uS.getUserStatus().equalsIgnoreCase(userStatus)) {
+			if (uS.getStatus().equalsIgnoreCase(userStatus)) {
 				return uS;
 			}
 		}
@@ -27,7 +27,7 @@ public enum UserStatus {
 		StringBuilder sb = new StringBuilder("[");
 
 		for (UserStatus uS : UserStatus.values()) {
-			sb.append(uS.getUserStatus());
+			sb.append(uS.getStatus());
 			if (!uS.equals(UserStatus.values()[UserStatus.values().length - 1]))
 				sb.append(", ");
 		}

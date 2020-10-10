@@ -89,8 +89,8 @@ public class Chat extends GenericEntity<Long> {
 	public Message getLastMessage() {
 		if (lastMessage == null) {
 			lastMessage = Collections.max(messages,
-					Comparator.comparing(m -> m.getDate()));
-			lastMessage._setChat(null);
+					Comparator.comparing(Message::getDate));
+			lastMessage.setChat(null);
 		}
 		return lastMessage;
 	}
@@ -156,21 +156,5 @@ public class Chat extends GenericEntity<Long> {
 		return "Chat [code=" + code + ", fromUser=" + fromUser + ", toUser="
 				+ toUser + ", lastMessage=" + lastMessage + ", unreadMessages="
 				+ unreadMessages + "]";
-	}
-
-	// -------------- RELATIONS --------------
-
-	Set<Message> _getMessages() {
-		return messages;
-	}
-
-	public void addMessage(Message m) {
-		m._setChat(this);
-		messages.add(m);
-	}
-
-	public void removeMessage(Message m) {
-		messages.remove(m);
-		m._setChat(null);
 	}
 }

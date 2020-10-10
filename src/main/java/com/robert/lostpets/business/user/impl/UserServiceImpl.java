@@ -24,6 +24,7 @@ import com.robert.lostpets.persistence.UserRepository;
  * @author Robert Ene
  * @see com.robert.lostpets.business.user.UserService
  */
+@SuppressWarnings("java:S1192")
 @Service
 public class UserServiceImpl implements UserService {
 

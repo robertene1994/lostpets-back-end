@@ -12,6 +12,7 @@ import com.robert.lostpets.entity.exception.BusinessException;
  * @author Robert Ene
  * @see com.robert.lostpets.business.message.validator.MessageValidator
  */
+@SuppressWarnings("java:S1192")
 @Component
 public class MessageValidatorImpl implements MessageValidator {
 

@@ -12,9 +12,9 @@ import com.robert.lostpets.entity.exception.BusinessException;
  * @author Robert Ene
  * 
  * @param <T> el tipo de la entidad.
- * @param <ID> el tipo del id de la entidad.
+ * @param <I> el tipo del id de la entidad.
  */
-public interface GenericValidator<T, ID extends Serializable> {
+public interface GenericValidator<T, I extends Serializable> {
 
 	/**
 	 * Método que valida la operación de encontrar y devolver una entidad dado
@@ -22,7 +22,7 @@ public interface GenericValidator<T, ID extends Serializable> {
 	 * 
 	 * @param id el id de la entidad.
 	 */
-	void findById(ID id) throws BusinessException;
+	void findById(I id) throws BusinessException;
 
 	/**
 	 * Método que valida la operación de guardar una entidad en el sistema.
@@ -45,5 +45,5 @@ public interface GenericValidator<T, ID extends Serializable> {
 	 * 
 	 * @param id el id de la entidad.
 	 */
-	void deleteById(ID id) throws BusinessException;
+	void deleteById(I id) throws BusinessException;
 }

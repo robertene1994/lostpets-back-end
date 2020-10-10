@@ -21,6 +21,7 @@ import com.robert.lostpets.entity.types.UserStatus;
  * 
  * @author Robert Ene
  */
+@SuppressWarnings("java:S4684")
 @RequestMapping("user")
 public interface UserRestService {
 

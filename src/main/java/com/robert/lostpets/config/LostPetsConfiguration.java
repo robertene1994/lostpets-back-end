@@ -113,7 +113,7 @@ public class LostPetsConfiguration extends WebMvcConfigurerAdapter  {
 	@Bean
 	public EmbeddedServletContainerFactory servletContainerFactory() {
 		TomcatEmbeddedServletContainerFactory factory = new TomcatEmbeddedServletContainerFactory();
-		factory.addConnectorCustomizers((connector) -> {
+		factory.addConnectorCustomizers(connector -> {
 			((AbstractProtocol<?>) connector.getProtocolHandler()).setConnectionTimeout(60000);
 			((AbstractHttp11Protocol<?>) connector.getProtocolHandler()).setMaxSwallowSize(-1);
 		});

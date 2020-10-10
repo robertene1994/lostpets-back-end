@@ -15,6 +15,10 @@ public class CodeGenerator {
 	private static final Integer CODE_LENGTH_MAX = 30;
 	public static final Integer CODE_LENGTH_DEFAULT = 10;
 
+	CodeGenerator() {
+		
+	}
+	
 	public static String random() {
 		return random(CODE_LENGTH_DEFAULT);
 	}

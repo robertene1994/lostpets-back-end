@@ -186,10 +186,4 @@ public class Ad extends GenericEntity<Long> {
 	public String toString() {
 		return "Ad [code=" + code + ", date=" + date + ", user=" + user + "]";
 	}
-
-	// -------------- RELATIONS --------------
-
-	void _setUser(User user) {
-		this.user = user;
-	}
 }

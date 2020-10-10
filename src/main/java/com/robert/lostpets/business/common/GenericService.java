@@ -12,9 +12,9 @@ import com.robert.lostpets.entity.exception.BusinessException;
  * @author Robert Ene
  * 
  * @param <T> el tipo de la entidad
- * @param <ID> el tipo del id de la entidad
+ * @param <I> el tipo del id de la entidad
  */
-public interface GenericService<T, ID extends Serializable> {
+public interface GenericService<T, I extends Serializable> {
 
 	/**
 	 * Método que devuelve una entidad del sistema dado su id.
@@ -22,7 +22,7 @@ public interface GenericService<T, ID extends Serializable> {
 	 * @param id el id de la entidad.
 	 * @return la entidad con el id establecido.
 	 */
-	T find(ID id) throws BusinessException;
+	T find(I id) throws BusinessException;
 
 	/**
 	 * Método que devuelve todas las entidades de un determinado tipo.
@@ -54,5 +54,5 @@ public interface GenericService<T, ID extends Serializable> {
 	 * @return true si la entidad ha sido localizada y eliminada, false de lo
 	 *         contrario.
 	 */
-	Boolean deleteById(ID id) throws BusinessException;
+	Boolean deleteById(I id) throws BusinessException;
 }
