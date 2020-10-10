@@ -22,7 +22,7 @@ jobs:
               java-version: 11
    
          - name: SonarCloud scan 🔎
-           run: mvn verify sonar:sonar
+           run: mvn verify sonar:sonar -DskipTests
            env:
              JASYPT_ENCRYPTOR_PASSWORD: ${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}
              SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
