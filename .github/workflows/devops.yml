@@ -1,16 +1,16 @@
 name: DevOps (CI/CD) ☁️
 
 on:
-  push:
-    branches:
-      - master
+   push:
+      branches:
+         - master
 
 jobs:
-  code-analysis:
-    name: Code analysis 🔍
-    runs-on: ubuntu-latest
+   code-analysis:
+   name: Code analysis 🔍
+   runs-on: ubuntu-latest
 
-    steps:
+   steps:
       - name: Repository checkout 🛎️
         uses: actions/checkout@v2
         with:
@@ -27,7 +27,6 @@ jobs:
           JASYPT_ENCRYPTOR_PASSWORD: ${{ secrets.JASYPT_ENCRYPTOR_PASSWORD }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
-jobs:
    build-and-test:
       name: Build and test ⚙️
       runs-on: ubuntu-latest
