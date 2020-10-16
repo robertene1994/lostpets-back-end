@@ -18,9 +18,9 @@
 
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=bugs)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end) [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=code_smells)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end) [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=robertene1994_lostpets-back-end&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=robertene1994_lostpets-back-end)
 
-#### Continuous Integration ☁️
+#### DevOps (CI/CD) ☁
 
-[![CI/CD](https://github.com/robertene1994/lostpets-back-end/workflows/DevOps%20(CI/CD)%20%E2%98%81%EF%B8%8F/badge.svg)](https://github.com/robertene1994/lostpets-back-end/actions?query=workflow%3A%22DevOps+%28CI%2FCD%29+%E2%98%81%EF%B8%8F%22) 
+[![DevOps (CI)](<https://github.com/robertene1994/lostpets-back-end/workflows/DevOps%20(CI)/badge.svg>)](https://github.com/robertene1994/lostpets-back-end/actions?query=workflow%3A%22DevOps+%28CI%29%22) [![DevOps (CD)](<https://github.com/robertene1994/lostpets-back-end/workflows/DevOps%20(CD)/badge.svg>)](https://github.com/robertene1994/lostpets-back-end/actions?query=workflow%3A%22DevOps+%28CD%29%22)
 
 #### Continuous Deployment 🚀
 
