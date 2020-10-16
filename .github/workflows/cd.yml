@@ -11,6 +11,9 @@ jobs:
       name: Deploy 🚀
       runs-on: ubuntu-latest
       steps:
+         - name: Repository checkout 🛎️
+           uses: actions/checkout@v2
+      
          - name: Build ⚒️
            run: mvn clean package
            env:
